@@ -2,9 +2,7 @@
 
 
 “ADVCALC” DOCUMENTATION
-
-
-Oğuz Kağnıcı                                    27.03.2023
+                             
 Summary:
        This program is an arithmetic expression evaluator. The program reads
 stdin inputs line by line and evaluating them after parsing it according to the
@@ -15,8 +13,6 @@ symbol should be used. If an expression contains invalid characters or written i
 an invalid format, program detects it and warns the user. Variable assignment
 feature works with 2 arrays that are responsible for holding the variable names
 and the respective values which resembles the HashMap data structure.
-
-
 
 
 Important Notes:
@@ -33,7 +29,7 @@ Grammar:
 
 <expression > -> <variable> “=” <orstatement> | <orstatement>
 <orstatement > -> <andstatement><moreor>
-<moreor> -> “|” <orstatement> | ε
+<moreor> -> “|” <orstatement> | ε
 
 <andstatement> -> <incrementOperations> <moreand>
 <moreand> -> “&” <andstatement> | ε
@@ -66,10 +62,8 @@ simultaneously, it is essential to check what the upcoming token is. With the
 help of the gettoken() function, program detects the next token in line and
 decides whether the input is valid. If not, calling the appropriate function also
 depends on this function.
-Examples:
 
-
-
+Examples:
 
 % ./advcalc
 
@@ -126,7 +120,7 @@ Error!
 >b
 
 9
-Difficulties Encountered / Possible Improvements:
+Difficulties Encountered / Possible Improvements:
        One of the major difficulties that was encountered during this project was
 the lack of the modern data structures in C language. A HashMap could have
 been used for storing the variables and their values. Furthermore, Stack and
@@ -134,4 +128,3 @@ PriorityQueue data structures could have possibly made the evaluation process
 easier. Another drawback to mention is that the program does not use the
 memory efficiently since the used parts are not freed afterwards in the current
 implementation.
-
